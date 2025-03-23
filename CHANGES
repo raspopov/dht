@@ -1,3 +1,30 @@
+27 April 2022: dht-0.27
+
+  * Fixed the return value of new_search when no slots are available.
+    Thanks to Joel.
+
+16 December 2018: dht-0.26
+
+  * Fixed a bug introduced in 0.25 that prevented replying to find_nodes
+    when want was not set.
+  * Rename dht_callback to dht_callback_t.  This is an incompatible change.
+
+9 February 2018: dht-0.25
+
+  * Made the sendto function used by the library customisable.  This is an
+    incompatible change.
+  * Rely on the caller to mark the sockets as nonblocking.  This is an
+    incompatible change.
+  * Report duplicate searches reliably.  Thanks to Greg Hazel.
+  * Increased the number of in-flight queries to 4.  Thanks to Greg Hazel.
+  * Implement variable-size buckets (between 8 and 128).  Thanks to Greg
+    Hazel.
+  * Improved search speed during bootstrap.  Thanks to Greg Hazel.
+  * Fixed a bug in the parser that would spuriously insert peers with port
+    number 1.  Thanks to Carl Reinke.
+  * Added support for the implied_port parameter of the announce_peer
+    message.  Thanks to Carl Reinke for pointing out the omission.
+
 18 May 2015: dht-0.24
 
   * Fixed off-by-one error that dropped find_nodes responses with exactly
